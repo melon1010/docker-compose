@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  pandora:
+    image: pengzhile/pandora
+    # 容器名称
+    container_name: chatgpt
+    # 自启动
+    restart: always
+    environment:
+      - PANDORA_CLOUD=cloud
+      - PANDORA_SERVER=0.0.0.0:8899
+      - PANDORA_ACCESS_TOKEN=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1UaEVOVUpHTkVNMVFURTRNMEZCTWpkQ05UZzVNRFUxUlRVd1FVSkRNRU13UmtGRVFrRXpSZyJ9.eyJodHRwczovL2FwaS5vcGVuYWkuY29tL3Byb2ZpbGUiOnsiZW1haWwiOiJ3ZWkubWVsb245QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwiaHR0cHM6Ly9hcGkub3BlbmFpLmNvbS9hdXRoIjp7InVzZXJfaWQiOiJ1c2VyLUdUdkU0WURoZEh5RGpwck9NWUJsV0FHSCJ9LCJpc3MiOiJodHRwczovL2F1dGgwLm9wZW5haS5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDI3MjA3MjQwNDQ3OTAyMjU3NjIiLCJhdWQiOlsiaHR0cHM6Ly9hcGkub3BlbmFpLmNvbS92MSIsImh0dHBzOi8vb3BlbmFpLm9wZW5haS5hdXRoMGFwcC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNjg3MTM3NDMzLCJleHAiOjE2ODgzNDcwMzMsImF6cCI6IlRkSkljYmUxNldvVEh0Tjk1bnl5d2g1RTR5T282SXRHIiwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCBtb2RlbC5yZWFkIG1vZGVsLnJlcXVlc3Qgb3JnYW5pemF0aW9uLnJlYWQgb3JnYW5pemF0aW9uLndyaXRlIn0.ys6zxQ2viwqzPvlhe9cMJnQZTAgYo7PfGK9lc7JPyfGwOH7pBHkOmAEoxDFYM7oLbwoPY_ktxmkbV62PUAUUe1oWl8Jq1LfEE3LqNK7HYSXwnhpQZ4aPL1r2geTBSF5k_eOWf0mG5-aNw2Vk6rdIPsdbEhu2yDp31nG-ZqrBrj5d0cocsTMrkeWTZW75ZvB0dwrXPRB9T8R6NiranC8RULhQnoc-rTVdQTiwXAlgrFmVT5hEMz475QBT3kCRe4ooSfQltUk3_wArcCAeSIfWHzXd5oSp4nZJzq0GJcIEd-UgcB4qrtFphJlMYYO_S6eEFFovxR16Z7WSitFKsgn_HA
+    ports:
+      - 8899:8899
+    # 增加其他需要的配置项
